@@ -37,7 +37,7 @@ function MusicPlayer({ musicReady }) {
 
     let albumArtUrl = ''
     let audioUrl = ''
-    
+
     try {
         albumArtUrl = new URL('../assets/images/11.jpeg', import.meta.url).href
     } catch (e) {
@@ -45,7 +45,7 @@ function MusicPlayer({ musicReady }) {
     }
 
     try {
-        audioUrl = new URL('../assets/audio/1.mp3', import.meta.url).href
+        audioUrl = '/audio/1.mp3'
     } catch (e) {
         console.log('Audio file not found')
     }

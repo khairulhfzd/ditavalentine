@@ -32,13 +32,7 @@ function FrameSequencePlayer({
         const actualIndex = startIndex + frameIndex
         const paddedIndex = String(actualIndex).padStart(paddingLength, '0')
         const filename = `${framePrefix}${paddedIndex}.${frameExtension}`
-
-        try {
-            return new URL(`../assets/videos/${filename}`, import.meta.url).href
-        } catch (e) {
-            console.error('Path error:', e)
-            return ''
-        }
+        return `/frames/${filename}`
     }, [startIndex, framePrefix, frameExtension, paddingLength])
 
     const loadFrame = useCallback((frameIndex) => {
