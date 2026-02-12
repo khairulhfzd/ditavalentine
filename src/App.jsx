@@ -10,6 +10,7 @@ import FlowerSection from './components/FlowerSection.jsx'
 import FinalSection from './components/FinalSection.jsx'
 import FrameSequenceSection from './components/FrameSequenceSection.jsx'
 import WelcomeOverlay from './components/WelcomeOverlay.jsx'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true)
@@ -45,6 +46,7 @@ function App() {
           </main>
         </div>
       </SmoothScroll>
+      <Analytics />
     </>
   )
 }
